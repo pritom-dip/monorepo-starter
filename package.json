@@ -4,13 +4,13 @@
   "name": "monorepo-starter",
   "version": "0.0.1",
   "workspaces": [
-    "client",
+    "frontend",
     "server"
   ],
   "scripts": {
-    "client": "yarn workspace client start",
+    "client": "yarn workspace frontend start",
     "server": "yarn workspace server start",
-    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client dev\""
+    "start": "concurrently \"yarn workspace server start\" \"yarn workspace frontend dev\""
   },
   "devDependencies": {
     "concurrently": "^7.2.1"
