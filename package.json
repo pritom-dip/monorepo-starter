@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "npmClient": "yarn",
+  "name": "monorepo-starter",
+  "version": "0.0.1",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "client": "yarn workspace client start",
+    "server": "yarn workspace server start",
+    "start": "concurrently \"yarn workspace server start\" \"yarn workspace client dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.2.1"
+  }
+}
